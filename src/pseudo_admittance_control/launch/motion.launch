@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="move_group_interface_tutorial" pkg="pseudo_admittance_control" type="motion" respawn="false" output="screen">
+  </node>
+
+</launch>

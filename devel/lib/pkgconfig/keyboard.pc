@@ -1,0 +1,8 @@
+prefix=/home/legoboost/catkin_ws_internship/devel
+
+Name: keyboard
+Description: Description of keyboard
+Version: 0.1.1
+Cflags: -I/home/legoboost/catkin_ws_internship/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs message_runtime

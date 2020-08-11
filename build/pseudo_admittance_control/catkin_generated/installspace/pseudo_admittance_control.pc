@@ -1,0 +1,8 @@
+prefix=/home/legoboost/catkin_ws_internship/install
+
+Name: pseudo_admittance_control
+Description: Description of pseudo_admittance_control
+Version: 0.0.0
+Cflags: -I${prefix}/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: moveit_core moveit_ros_planning_interface tf2_geometry_msgs roscpp
