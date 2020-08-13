@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="jointManipulator" pkg="pseudo_admittance_control" type="pseudo_admittance_control_jointAnglesProvider" respawn="false" output="screen">
+
+  </node>
+
+</launch>

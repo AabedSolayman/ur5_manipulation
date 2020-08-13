@@ -60,13 +60,12 @@ include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${EIGEN3
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
- add_executable(${PROJECT_NAME}_motion src/motion.cpp)
- add_executable(${PROJECT_NAME}_forcePublisher src/forcePublisher.cpp)
+ add_executable(${PROJECT_NAME}_endEffectorMover src/endEffectorMover.cpp)
+ add_executable(${PROJECT_NAME}_jointAnglesProvider src/jointAnglesProvider.cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(${PROJECT_NAME}_motion ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-target_link_libraries(${PROJECT_NAME}_forcePublisher ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-
+target_link_libraries(${PROJECT_NAME}_endEffectorMover ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_jointAnglesProvider ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 #############
 ## Install ##
 #############
@@ -74,7 +73,7 @@ target_link_libraries(${PROJECT_NAME}_forcePublisher ${catkin_LIBRARIES} ${Boost
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
- install(TARGETS ${PROJECT_NAME}_motion DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+ install(TARGETS ${PROJECT_NAME}_endEffectorMover DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ## Mark cpp header files for installation
  install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 

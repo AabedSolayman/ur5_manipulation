@@ -1,6 +1,10 @@
 <launch>
 
-  <node name="move_group_interface_tutorial" pkg="pseudo_admittance_control" type="motion" respawn="false" output="screen">
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop">
+    <remap from="cmd_vel" to="force_applier"/>
+  </node>
+
+  <node name="endEffectorMover" pkg="pseudo_admittance_control" type="pseudo_admittance_control_endEffectorMover" respawn="false" output="screen">
   </node>
 
 </launch>

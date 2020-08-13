@@ -53,21 +53,21 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_motion" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_motion")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_motion"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control" TYPE EXECUTABLE FILES "/home/legoboost/catkin_ws_internship/devel/lib/pseudo_admittance_control/pseudo_admittance_control_motion")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_motion" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_motion")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control" TYPE EXECUTABLE FILES "/home/legoboost/catkin_ws_internship/devel/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_motion"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover"
          OLD_RPATH "/home/legoboost/catkin_ws/devel/lib:/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_motion")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pseudo_admittance_control/pseudo_admittance_control_endEffectorMover")
     endif()
   endif()
 endif()
