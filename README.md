@@ -21,8 +21,12 @@ Task 1: Each Joint moves from -PI to PI
  roslaunch pseudo_admittance_control joint_manipulation.launch 
 ```
 
+
 Task 2: Controlling the Robot by using Telepo_keyboard. For more information about teleop, please visit: http://wiki.ros.org/teleop_twist_keyboard_cpp
 ```
  roslaunch demo_moveit_config demo_planning_execution.launch
  roslaunch pseudo_admittance_control motion.launch
 ```
+TODO:
+- What happens at the limits? 
+- Logging
