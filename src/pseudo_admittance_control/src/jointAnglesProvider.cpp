@@ -6,16 +6,13 @@
 
 
 
-// get the parameteres from the parametere server and assign them to the new joint values
 std::vector<double> getJointValuesParameters(std::vector<double> joint_values, double increment){
 
-  for(int jointCounter=0;jointCounter<joint_values.size();jointCounter++){
-
+  for(int jointCounter=0;jointCounter<joint_values.size();jointCounter++)
+    
     joint_values[jointCounter] = 2.45*sin(increment);
 
-
-  }
-    std::cout<<"Joints " << " have the value " << joint_values[0]<<std::endl;
+  std::cout<<"Joints " << " have the value " << joint_values[0]<<std::endl;
 
   return joint_values;
 }
@@ -37,7 +34,7 @@ int main(int argc, char** argv){
   moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
 
   const robot_state::JointModelGroup* joint_model_group =
-      move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
+  move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
 
   moveit::core::RobotStatePtr current_state = move_group.getCurrentState();
   current_state->copyJointGroupPositions(joint_model_group, joints_values);
