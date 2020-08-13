@@ -19,6 +19,9 @@
 
   <include file="$(find demo_moveit_config)/launch/moveit_rviz.launch">
     <arg name="rviz_config" value="true"/>
+
+
+  <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find pseudo_admittance_control)/launch/ur5_rviz.rviz"/>
   </include>
 
 </launch>
